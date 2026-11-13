@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar-EG" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>موسى الفاجر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;500;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#050506;
+  --panel:#0b0c10;
+  --line:rgb(255 255 255/.12);
+  --ink:#fff;
+  --mute:#9aa1b0;
+  --blue:#00b7ff;
+  --font:-apple-system,BlinkMacSystemFont,"SF Arabic","SF Pro Arabic","SF Pro Text","Noto Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);
+  line-height:1.9;min-height:100vh;display:flex;flex-direction:column;
+  background-image:radial-gradient(ellipse 60% 40% at 50% 0,rgb(0 183 255/.16),transparent 70%);
+  background-repeat:no-repeat;
+}
+header{padding:84px 20px 56px;text-align:center}
+h1{
+  margin:0;font-weight:800;font-size:clamp(2.6rem,9vw,5rem);line-height:1.3;
+  text-shadow:0 0 28px rgb(0 183 255/.55);
+}
+header::after{
+  content:"";display:block;width:64px;height:2px;margin:28px auto 0;
+  background:var(--blue);box-shadow:0 0 16px var(--blue);border-radius:2px;
+}
+main{
+  flex:1;width:100%;max-width:960px;margin:0 auto;padding:0 20px 88px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px;
+}
+.card{
+  position:relative;overflow:hidden;background:var(--panel);
+  border:1px solid var(--line);border-radius:24px;padding:36px 32px 32px;
+  display:flex;flex-direction:column;gap:18px;transition:border-color .3s ease;
+}
+.card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s ease;
+  background:radial-gradient(360px circle at var(--x,50%) var(--y,0),rgb(0 183 255/.14),transparent 70%);
+}
+.card:hover{border-color:rgb(0 183 255/.6)}
+.card:hover::before{opacity:1}
+.ico{font-size:2rem;line-height:1;width:60px;height:60px;display:grid;place-items:center;
+  border:1px solid rgb(0 183 255/.5);border-radius:18px;box-shadow:0 0 22px rgb(0 183 255/.18) inset}
+.card h2{margin:6px 0 0;font-size:1.65rem;font-weight:800}
+.card p{margin:0;color:var(--mute);font-size:1.05rem;font-weight:300}
+.actions{margin-top:auto;padding-top:10px;display:flex;flex-direction:column;gap:12px}
+.soon{
+  display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;
+  border:1px solid var(--line);border-radius:14px;color:var(--ink);font-weight:500;
+  user-select:none;cursor:not-allowed;
+}
+.soon::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px var(--blue)}
+.music{
+  display:flex;align-items:center;justify-content:center;gap:10px;padding:15px;
+  background:var(--blue);color:#000;font-weight:800;border-radius:14px;text-decoration:none;
+  box-shadow:0 0 28px rgb(0 183 255/.35);transition:box-shadow .25s ease,transform .25s ease;
+}
+.music:hover{box-shadow:0 0 44px rgb(0 183 255/.65);transform:translateY(-1px)}
+.music:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.music svg{width:20px;height:20px}
+.music.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.music.ghost:hover{border-color:var(--blue);box-shadow:0 0 24px rgb(0 183 255/.3)}
+footer{text-align:center;padding:28px 20px 34px;color:var(--mute);font-weight:500;border-top:1px solid var(--line)}
+@media (max-width:520px){
+  header{padding-top:60px}
+  .card{padding:28px 22px 24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header><h1>موسى الفاجر</h1></header>
+
+<main>
+  <article class="card">
+    <div class="ico" aria-hidden="true">🎧</div>
+    <h2>تطبيق الأغاني</h2>
+    <p>هتسمع أغاني لحد ما الجيران يخبطوا عليك، وبعدين يسألوك على اسم الأغنية. مفيش إعلانات تقطع عليك الدور، والبطارية بس هي اللي هتعيط.</p>
+    <div class="actions">
+      <a class="music" href="https://drive.usercontent.google.com/download?id=1kpf9lffBc-EtxZeTAZZgnW79_qCsdSnP&export=download&confirm=t" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+        تنزيل التطبيق
+      </a>
+      <a class="music ghost" href="#" id="music">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+        تحميل الموسيقى
+      </a>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="ico" aria-hidden="true">🏎️</div>
+    <h2>لعبة السيارات</h2>
+    <p>سوق زي المجنون من غير غرامات ولا دوشة ركنة. الفرامل اختيارية والزمارة إجبارية، ولو خبطت متقولش «أنا اللي معايا الأولوية».</p>
+    <div class="actions">
+      <a class="music" href="https://drive.usercontent.google.com/download?id=1F4jG5EsugKZCJJCHqA8z5Kwm_k7oK9wy&export=download&confirm=t" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+        تنزيل اللعبة
+      </a>
+    </div>
+  </article>
+</main>
+
+<footer>© <span id="y"></span> موسى الفاجر</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  // حط رابط تحميل الموسيقى هنا
+  var MUSIC_URL = "";
+  var m = document.getElementById('music');
+  if (MUSIC_URL) m.href = MUSIC_URL; else m.addEventListener('click', function (e) { e.preventDefault(); });
+  document.querySelectorAll('.card').forEach(function (c) {
+    c.addEventListener('pointermove', function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      c.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    });
+  });
+</script>
+</body>
+</html>
